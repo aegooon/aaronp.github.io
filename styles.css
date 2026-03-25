@@ -1,11 +1,10 @@
-           /* ==========================================================================
+        /* ==========================================================================
            1. CSS Variables & Theme
            ========================================================================== */
         :root {
             --au-blue: #0F3A79;
             --au-blue-light: #1d54a6;
             --au-red: #C8102E;
-            --au-gold: #FFB81C;
             --au-gray: #F3F4F6;
             --au-dark: #1F2937;
             --text-light: #9ca3af;
@@ -82,12 +81,12 @@
             border: none;
         }
 
-        .btn-gold {
-            background-color: var(--au-gold);
-            color: var(--au-blue);
+        .btn-red {
+            background-color: var(--au-red);
+            color: var(--white);
         }
-        .btn-gold:hover {
-            background-color: var(--white);
+        .btn-red:hover {
+            background-color: var(--au-blue);
         }
 
         .btn-outline {
@@ -105,7 +104,8 @@
             color: var(--au-blue);
         }
         .btn-white:hover {
-            background-color: var(--au-gold);
+            background-color: var(--au-red);
+            color: var(--white);
         }
 
         .section-padding {
@@ -136,36 +136,13 @@
         .divider {
             width: 96px;
             height: 4px;
-            background-color: var(--au-gold);
+            background-color: var(--au-red);
             margin: 24px auto 0;
         }
 
         /* ==========================================================================
-           4. Top Bar & Navigation
+           4. Navigation
            ========================================================================== */
-        .top-bar {
-            background-color: var(--au-red);
-            color: var(--white);
-            font-size: 12px;
-            padding: 8px 0;
-        }
-
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-bar-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .top-bar-links a:hover {
-            color: var(--au-gold);
-        }
-
         .header {
             background-color: var(--au-blue);
             position: sticky;
@@ -190,7 +167,7 @@
         .logo-icon {
             width: 48px;
             height: 48px;
-            background-color: var(--au-gold);
+            background-color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -208,7 +185,7 @@
         }
 
         .logo-text h2 {
-            color: var(--au-gold);
+            color: var(--au-red);
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -248,7 +225,7 @@
         }
         
         .search-btn:hover {
-            color: var(--au-gold);
+            color: var(--au-red);
         }
 
         .mobile-menu-btn {
@@ -294,7 +271,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(15, 58, 121, 0.7); /* au-blue with opacity */
+            background-color: rgba(15, 58, 121, 0.7);
             mix-blend-mode: multiply;
         }
 
@@ -337,7 +314,7 @@
         }
 
         .hero h1 span {
-            color: var(--au-gold);
+            color: var(--au-red);
         }
 
         .hero p {
@@ -461,7 +438,7 @@
 
         .badge-blue { background-color: var(--au-blue); }
         .badge-red { background-color: var(--au-red); }
-        .badge-gold { background-color: var(--au-gold); color: var(--au-blue); }
+        .badge-gray { background-color: var(--text-muted); color: var(--white); }
 
         .card-content {
             padding: 24px;
@@ -488,7 +465,7 @@
         }
 
         .card:hover .card-title {
-            color: var(--au-blue);
+            color: var(--au-red);
         }
 
         .card-footer {
@@ -536,10 +513,6 @@
             background-color: var(--white);
         }
 
-        .programs .divider {
-            background-color: var(--au-red);
-        }
-
         .program-card {
             border: 1px solid #e5e7eb;
             background-color: var(--au-gray);
@@ -570,7 +543,7 @@
         }
 
         .program-icon-title i {
-            color: var(--au-gold);
+            color: var(--au-red);
         }
 
         .program-list {
@@ -639,7 +612,8 @@
         }
 
         .campus-info .section-subtitle {
-            color: var(--au-gold);
+            color: var(--white);
+            opacity: 0.8;
         }
 
         .campus-info .section-title {
@@ -680,8 +654,8 @@
         .campus-icon {
             width: 48px;
             height: 48px;
-            background-color: rgba(255, 184, 28, 0.2);
-            color: var(--au-gold);
+            background-color: rgba(200, 16, 46, 0.2);
+            color: var(--au-red);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -714,7 +688,7 @@
         .campus-link {
             font-size: 14px;
             font-weight: 600;
-            color: var(--au-gold);
+            color: var(--white);
             display: flex;
             align-items: center;
             gap: 4px;
@@ -818,8 +792,8 @@
         }
 
         .social-btn:hover {
-            background-color: var(--au-gold);
-            color: var(--au-dark);
+            background-color: var(--au-red);
+            color: var(--white);
         }
 
         .footer-heading {
@@ -844,12 +818,12 @@
         }
 
         .footer-links i {
-            color: var(--au-gold);
+            color: var(--au-red);
             margin-top: 4px;
         }
 
         .footer-links a:hover {
-            color: var(--au-gold);
+            color: var(--au-red);
         }
 
         .footer-divider {
@@ -872,39 +846,27 @@
            10. Responsive Media Queries
            ========================================================================== */
         
-        /* Tablets (Max width 1024px) */
         @media (max-width: 1024px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
-            
             .hero h1 { font-size: 48px; }
-            
             .campus-layout { flex-direction: column; }
             .campus-info { text-align: center; }
             .campus-info .section-title { text-align: center; }
-            
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        /* Mobile (Max width 768px) */
         @media (max-width: 768px) {
-            .top-bar { display: none; }
             .desktop-nav { display: none; }
             .header-actions .btn { display: none; }
             .mobile-menu-btn { display: block; }
-            
             .hero h1 { font-size: 36px; }
             .hero p { font-size: 16px; }
             .hero-buttons { flex-direction: column; }
             .hero-buttons .btn { width: 100%; }
-            
             .orientation-banner .container { flex-direction: column; text-align: center; gap: 24px; }
-            
             .grid-4, .grid-2, .campus-grid { grid-template-columns: 1fr; }
-            
             .campus-info .section-title { font-size: 36px; }
-            
             .footer-grid { grid-template-columns: 1fr; gap: 32px; }
             .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
-            
             .partners-logos { gap: 32px; }
         }
